@@ -11,7 +11,7 @@ import MapKit
 import CoreLocation
 
 
-class SecoundViewController: UIViewController, CLLocationManagerDelegate {
+class Asia: UIViewController, CLLocationManagerDelegate {
     
     
     
@@ -21,6 +21,7 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet var mapView: MKMapView!
     
+    @IBOutlet var segmentControl: UISegmentedControl!
     
     @IBOutlet var questionLabel: UILabel!
     
@@ -43,7 +44,7 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
     
     
     var correctAnswer = String()
-    var randomQuestionArray:[Int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46]
+    var randomQuestionArray:[Int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43]
     
     
     var livesNumber:Int = 3
@@ -69,7 +70,7 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
         
         nextQuestionOutlet.layer.cornerRadius = 15
         
-        countQuestionsLabel.text = "Question: 1/46"
+        countQuestionsLabel.text = "Q: 1/43"
         
         
         randomQuestions()
@@ -90,9 +91,34 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
     
 
     
-  
+    @IBAction func mapType(_ sender: Any) {
+        
+        if segmentControl.selectedSegmentIndex == 0 {
+            
+            mapView.mapType = MKMapType.standard
+        }
+        if segmentControl.selectedSegmentIndex == 1 {
+            
+            mapView.mapType = MKMapType.satellite
+        }
+        if segmentControl.selectedSegmentIndex == 2 {
+            
+            mapView.mapType = MKMapType.hybrid
+        }
+        
+    }
     
-  
+    
+    @IBAction func loacteMe(_ sender: Any) {
+        
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.requestWhenInUseAuthorization()
+        manager.startUpdatingLocation()
+        
+        mapView.showsUserLocation = true
+        
+    }
     
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -199,8 +225,7 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
         )
     
         
-  
-        
+    
         
     
       
@@ -214,7 +239,7 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
     
     func didUserWin() {
         
-        if countQuestions == 46 && livesNumber > 0 {
+        if countQuestions == 43 && livesNumber > 0 {
             
             
             finishOutlet.isHidden = false
@@ -241,11 +266,11 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
         
         countQuestions += 1
         
-        if countQuestions > 46 {
-            countQuestions = 46
+        if countQuestions > 43 {
+            countQuestions = 43
         }
         
-        countQuestionsLabel.text = String("Question: \(countQuestions)/46")
+        countQuestionsLabel.text = String("Q: \(countQuestions)/43")
         
         
         
@@ -277,10 +302,10 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
         case 1:
             
             
-            let latitude:Double = 40.143105
-            let longitude:Double = 47.57692700000007
+            let latitude:Double = 34.5553494
+            let longitude:Double = 69.20748600000002
             
-            let span = MKCoordinateSpanMake(45, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -297,11 +322,11 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of Azerbaijan is ..."
+            questionLabel.text = "The capital of Afganistan is ..."
             button1.setTitle("Astana", for: UIControlState.normal)
-            button2.setTitle("Baku", for: UIControlState.normal)
+            button2.setTitle("Kabul", for: UIControlState.normal)
             button3.setTitle("Tibilisi", for: UIControlState.normal)
-            button4.setTitle("Bucharest", for: UIControlState.normal)
+            button4.setTitle("Amman", for: UIControlState.normal)
             
             correctAnswer = "2"
     
@@ -309,8 +334,8 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
         case 2:
             
             
-            let latitude:Double = 53.709807
-            let longitude:Double = 27.953389000000016
+            let latitude:Double = 26.2285161
+            let longitude:Double = 50.58604969999999
             
             let span = MKCoordinateSpanMake(55, 55)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
@@ -326,20 +351,20 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of Belarus is ..."
-            button1.setTitle("Murcia", for: UIControlState.normal)
-            button2.setTitle("Moscow", for: UIControlState.normal)
+            questionLabel.text = "The capital of Bahrain is ..."
+            button1.setTitle("Vientiane", for: UIControlState.normal)
+            button2.setTitle("Amman", for: UIControlState.normal)
             button3.setTitle("Madeira", for: UIControlState.normal)
-            button4.setTitle("Minsk", for: UIControlState.normal)
+            button4.setTitle("Manama", for: UIControlState.normal)
             
             correctAnswer = "4"
             break
         case 3:
             
-            let latitude:Double = 50.503887
-            let longitude:Double = 4.4699359999999615
+            let latitude:Double = 23.810332
+            let longitude:Double = 90.41251809999994
             
-            let span = MKCoordinateSpanMake(25, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -354,21 +379,21 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of Belgium is ...?"
-            button1.setTitle("Brussels", for: UIControlState.normal)
-            button2.setTitle("Bratislava", for: UIControlState.normal)
-            button3.setTitle("Benelux", for: UIControlState.normal)
-            button4.setTitle("Bruges", for: UIControlState.normal)
+            questionLabel.text = "The capital of Bangladesh is ...?"
+            button1.setTitle("Dhaka", for: UIControlState.normal)
+            button2.setTitle("Baku", for: UIControlState.normal)
+            button3.setTitle("Bishkek", for: UIControlState.normal)
+            button4.setTitle("Jakarta", for: UIControlState.normal)
             
             correctAnswer = "1"
             break
         case 4:
             
             
-            let latitude:Double = 43.915886
-            let longitude:Double = 17.67907600000001
+            let latitude:Double = 27.514162
+            let longitude:Double = 90.43360099999995
             
-            let span = MKCoordinateSpanMake(25, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -383,20 +408,20 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of Bosnia is ...?"
-            button1.setTitle("Sofia", for: UIControlState.normal)
-            button2.setTitle("Sarajevo", for: UIControlState.normal)
-            button3.setTitle("Zagreb", for: UIControlState.normal)
+            questionLabel.text = "The capital of Bhutan is ...?"
+            button1.setTitle("Kabul", for: UIControlState.normal)
+            button2.setTitle("Thimpu", for: UIControlState.normal)
+            button3.setTitle("Dubai", for: UIControlState.normal)
             button4.setTitle("Podgorica", for: UIControlState.normal)
             
             correctAnswer = "2"
             break
         case 5:
             
-            let latitude:Double = 41.153332
-            let longitude:Double = 20.168330999999966
+            let latitude:Double = 4.535277000000001
+            let longitude:Double = 114.72766899999999
             
-            let span = MKCoordinateSpanMake(25, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -411,21 +436,21 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of Albania is ...?"
+            questionLabel.text = "The capital of Brunei is ...?"
             button1.setTitle("Tyraspol", for: UIControlState.normal)
-            button2.setTitle("Tirana", for: UIControlState.normal)
-            button3.setTitle("Tallin", for: UIControlState.normal)
-            button4.setTitle("Turin", for: UIControlState.normal)
+            button2.setTitle("Bandar Seri Begawan", for: UIControlState.normal)
+            button3.setTitle("Dhaka", for: UIControlState.normal)
+            button4.setTitle("Thimphu", for: UIControlState.normal)
             
             correctAnswer = "2"
             break
         case 6:
             
             
-            let latitude:Double = 42.506285
-            let longitude:Double = 1.5218009999999822
+            let latitude:Double = 12.565679
+            let longitude:Double = 104.99096299999997
             
-            let span = MKCoordinateSpanMake(25, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -440,21 +465,21 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of Andorra is ...?"
-            button1.setTitle("Astana", for: UIControlState.normal)
-            button2.setTitle("Andorra", for: UIControlState.normal)
-            button3.setTitle("Valetta", for: UIControlState.normal)
-            button4.setTitle("Andorra la Vella", for: UIControlState.normal)
+            questionLabel.text = "The capital of Cambodia is ...?"
+            button1.setTitle("Muscat", for: UIControlState.normal)
+            button2.setTitle("Taipei", for: UIControlState.normal)
+            button3.setTitle("Damascus", for: UIControlState.normal)
+            button4.setTitle("Phnom Penh", for: UIControlState.normal)
             
             correctAnswer = "4"
             break
         case 7:
             
             
-            let latitude:Double = 40.069099
-            let longitude:Double = 45.03818899999999
+            let latitude:Double = 39.90419989999999
+            let longitude:Double = 116.40739630000007
             
-            let span = MKCoordinateSpanMake(25, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -469,21 +494,21 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of Armenia is ...?"
-            button1.setTitle("Minsk", for: UIControlState.normal)
+            questionLabel.text = "The capital of China is ...?"
+            button1.setTitle("Tehran", for: UIControlState.normal)
             button2.setTitle("Tibilisi", for: UIControlState.normal)
-            button3.setTitle("Yerevan", for: UIControlState.normal)
-            button4.setTitle("Baku", for: UIControlState.normal)
+            button3.setTitle("Beijing", for: UIControlState.normal)
+            button4.setTitle("Bangkok", for: UIControlState.normal)
             
             correctAnswer = "3"
             break
         case 8:
             
             
-            let latitude:Double = 47.516231
-            let longitude:Double = 14.550072
+            let latitude:Double = 39.90419989999999
+            let longitude:Double = 116.40739630000007
             
-            let span = MKCoordinateSpanMake(25, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -498,10 +523,10 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of Austria is ...?"
-            button1.setTitle("Zurich", for: UIControlState.normal)
-            button2.setTitle("Bern", for: UIControlState.normal)
-            button3.setTitle("Vienna", for: UIControlState.normal)
+            questionLabel.text = "The capital of India is ...?"
+            button1.setTitle("Bangore", for: UIControlState.normal)
+            button2.setTitle("Dushanbe", for: UIControlState.normal)
+            button3.setTitle("New Delhi", for: UIControlState.normal)
             button4.setTitle("Vaduz", for: UIControlState.normal)
             
             correctAnswer = "3"
@@ -509,10 +534,10 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
         case 9:
             
             
-            let latitude:Double = 42.733883
-            let longitude:Double = 25.485829999999964
+            let latitude:Double = -6.17511
+            let longitude:Double = 106.86503949999997
             
-            let span = MKCoordinateSpanMake(25, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -527,11 +552,11 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of Bulgaria is ...?"
-            button1.setTitle("Bratislava", for: UIControlState.normal)
+            questionLabel.text = "The capital of Indonesia is ...?"
+            button1.setTitle("Kuala Lumpur", for: UIControlState.normal)
             button2.setTitle("Bern", for: UIControlState.normal)
-            button3.setTitle("Sofia", for: UIControlState.normal)
-            button4.setTitle("Belgrade", for: UIControlState.normal)
+            button3.setTitle("Jakarta", for: UIControlState.normal)
+            button4.setTitle("Riyad", for: UIControlState.normal)
             
             correctAnswer = "3"
             break
@@ -539,10 +564,10 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
         case 11:
             
             
-            let latitude:Double = 45.8150108
-            let longitude:Double = 15.981919000000062
+            let latitude:Double = 35.6891975
+            let longitude:Double = 51.388973599999986
             
-            let span = MKCoordinateSpanMake(25, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -558,11 +583,11 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of Croatia is ...?"
-            button1.setTitle("Zurich", for: UIControlState.normal)
-            button2.setTitle("Zagreb", for: UIControlState.normal)
-            button3.setTitle("Belgrade", for: UIControlState.normal)
-            button4.setTitle("Ljubiana", for: UIControlState.normal)
+            questionLabel.text = "The capital of Iran is ...?"
+            button1.setTitle("Male", for: UIControlState.normal)
+            button2.setTitle("Tehran", for: UIControlState.normal)
+            button3.setTitle("Kabul", for: UIControlState.normal)
+            button4.setTitle("Baghdad", for: UIControlState.normal)
             
             correctAnswer = "2"
             break
@@ -570,10 +595,10 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
         case 12:
             
             
-            let latitude:Double = 39.9333635
-            let longitude:Double = 32.85974190000002
+            let latitude:Double = 33.3128057
+            let longitude:Double = 44.36148750000007
             
-            let span = MKCoordinateSpanMake(25, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -589,11 +614,11 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of Turkey is ...?"
+            questionLabel.text = "The capital of Iraq is ...?"
             button1.setTitle("Istambul", for: UIControlState.normal)
-            button2.setTitle("Ankara", for: UIControlState.normal)
+            button2.setTitle("Baghdad", for: UIControlState.normal)
             button3.setTitle("Baku", for: UIControlState.normal)
-            button4.setTitle("Ljubiana", for: UIControlState.normal)
+            button4.setTitle("Tehran", for: UIControlState.normal)
             
             correctAnswer = "2"
             break
@@ -602,10 +627,10 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
         case 13:
             
             
-            let latitude:Double = 41.9973462
-            let longitude:Double = 21.42799560000003
+            let latitude:Double = 31.768319
+            let longitude:Double = 35.21370999999999
             
-            let span = MKCoordinateSpanMake(25, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -621,11 +646,11 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of Macedonia is ...?"
+            questionLabel.text = "The capital of Israel is ...?"
             button1.setTitle("Tibilisi", for: UIControlState.normal)
             button2.setTitle("Erevan", for: UIControlState.normal)
-            button3.setTitle("Reykjavik", for: UIControlState.normal)
-            button4.setTitle("Skopje", for: UIControlState.normal)
+            button3.setTitle("Tel aviv", for: UIControlState.normal)
+            button4.setTitle("Jerusalem", for: UIControlState.normal)
             
             correctAnswer = "4"
             break
@@ -634,10 +659,10 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
         case 14:
             
             
-            let latitude:Double = 51.5073509
-            let longitude:Double = -0.12775829999998223
+            let latitude:Double = 35.6894875
+            let longitude:Double = 139.69170639999993
             
-            let span = MKCoordinateSpanMake(25, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -653,11 +678,11 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of England is ...?"
-            button1.setTitle("Liverpool", for: UIControlState.normal)
-            button2.setTitle("Manchester", for: UIControlState.normal)
-            button3.setTitle("London", for: UIControlState.normal)
-            button4.setTitle("Dublin", for: UIControlState.normal)
+            questionLabel.text = "The capital of Japan is ...?"
+            button1.setTitle("Doha", for: UIControlState.normal)
+            button2.setTitle("Dushanbe", for: UIControlState.normal)
+            button3.setTitle("Tokio", for: UIControlState.normal)
+            button4.setTitle("Beijing", for: UIControlState.normal)
             
             correctAnswer = "3"
             break
@@ -666,10 +691,10 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
         case 15:
             
             
-            let latitude:Double = 42.43041960000001
-            let longitude:Double = 19.259364199999936
+            let latitude:Double = 31.9453666
+            let longitude:Double = 35.92837159999999
             
-            let span = MKCoordinateSpanMake(25, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -685,11 +710,11 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of Montenegro is ...?"
-            button1.setTitle("Podgorica", for: UIControlState.normal)
-            button2.setTitle("Belgrade", for: UIControlState.normal)
-            button3.setTitle("Skopje", for: UIControlState.normal)
-            button4.setTitle("Ljubiana", for: UIControlState.normal)
+            questionLabel.text = "The capital of Jordan is ...?"
+            button1.setTitle("Amman", for: UIControlState.normal)
+            button2.setTitle("Muscat", for: UIControlState.normal)
+            button3.setTitle("Vientiane", for: UIControlState.normal)
+            button4.setTitle("Beirut", for: UIControlState.normal)
             
             correctAnswer = "1"
             break
@@ -698,10 +723,10 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
         case 16:
             
             
-            let latitude:Double = 41.90278349999999
-            let longitude:Double = 12.496365500000024
+            let latitude:Double = 51.1605227
+            let longitude:Double = 71.4703558
             
-            let span = MKCoordinateSpanMake(25, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -717,11 +742,11 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of Italy is ...?"
-            button1.setTitle("Vatican", for: UIControlState.normal)
-            button2.setTitle("Rome", for: UIControlState.normal)
-            button3.setTitle("Milano", for: UIControlState.normal)
-            button4.setTitle("Torino", for: UIControlState.normal)
+            questionLabel.text = "The capital of Kazahstan is ...?"
+            button1.setTitle("Beirut", for: UIControlState.normal)
+            button2.setTitle("Astana", for: UIControlState.normal)
+            button3.setTitle("Taipei", for: UIControlState.normal)
+            button4.setTitle("Bishkek", for: UIControlState.normal)
             
             correctAnswer = "2"
             break
@@ -730,10 +755,10 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
         case 17:
             
             
-            let latitude:Double = 55.755826
-            let longitude:Double = 37.6173
+            let latitude:Double = 40.339852
+            let longitude:Double = 127.51009299999998
             
-            let span = MKCoordinateSpanMake(25, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -749,11 +774,11 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of Russia is ...?"
-            button1.setTitle("Saint Petersburg", for: UIControlState.normal)
-            button2.setTitle("Minsk", for: UIControlState.normal)
-            button3.setTitle("Kiev", for: UIControlState.normal)
-            button4.setTitle("Moscow", for: UIControlState.normal)
+            questionLabel.text = "The capital of North Korea is ...?"
+            button1.setTitle("Jakarta", for: UIControlState.normal)
+            button2.setTitle("Ulaanbaatar", for: UIControlState.normal)
+            button3.setTitle("Seoul", for: UIControlState.normal)
+            button4.setTitle("Pyongyang", for: UIControlState.normal)
             
             correctAnswer = "4"
             break
@@ -762,10 +787,10 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
         case 18:
             
             
-            let latitude:Double = 52.52000659999999
-            let longitude:Double = 13.404953999999975
+            let latitude:Double = 35.90775699999999
+            let longitude:Double = 127.76692200000002
             
-            let span = MKCoordinateSpanMake(25, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -781,11 +806,11 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of Germany is ...?"
-            button1.setTitle("Munich", for: UIControlState.normal)
+            questionLabel.text = "The capital of South Korea is ...?"
+            button1.setTitle("Bangkok", for: UIControlState.normal)
             button2.setTitle("Zagreb", for: UIControlState.normal)
-            button3.setTitle("Berlin", for: UIControlState.normal)
-            button4.setTitle("Hamburg", for: UIControlState.normal)
+            button3.setTitle("Seoul", for: UIControlState.normal)
+            button4.setTitle("Pyongyang", for: UIControlState.normal)
             
             correctAnswer = "3"
             break
@@ -794,10 +819,10 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
         case 19:
             
             
-            let latitude:Double = 50.4501
-            let longitude:Double = 30.523400000000038
+            let latitude:Double = 29.375859
+            let longitude:Double = 47.97740520000002
             
-            let span = MKCoordinateSpanMake(25, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -813,11 +838,11 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of Ukraine is ...?"
+            questionLabel.text = "The capital of Kuwait is ...?"
             button1.setTitle("Warsaw", for: UIControlState.normal)
-            button2.setTitle("Budapest", for: UIControlState.normal)
-            button3.setTitle("Belgrade", for: UIControlState.normal)
-            button4.setTitle("Kiev", for: UIControlState.normal)
+            button2.setTitle("Dushanbe", for: UIControlState.normal)
+            button3.setTitle("Dubai", for: UIControlState.normal)
+            button4.setTitle("Kuwait City", for: UIControlState.normal)
             
             correctAnswer = "4"
             break
@@ -826,10 +851,10 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
         case 20:
             
             
-            let latitude:Double = 41.7151377
-            let longitude:Double = 44.82709599999998
+            let latitude:Double = 41.20438
+            let longitude:Double = 74.76609800000006
             
-            let span = MKCoordinateSpanMake(25, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -845,11 +870,11 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of Georgia is ...?"
-            button1.setTitle("Tibilisi", for: UIControlState.normal)
+            questionLabel.text = "The capital of Krgyzstan is ...?"
+            button1.setTitle("Bishkek", for: UIControlState.normal)
             button2.setTitle("Tirana", for: UIControlState.normal)
-            button3.setTitle("Tiraspol", for: UIControlState.normal)
-            button4.setTitle("Tallin", for: UIControlState.normal)
+            button3.setTitle("Kabul", for: UIControlState.normal)
+            button4.setTitle("Muscat", for: UIControlState.normal)
             
             correctAnswer = "1"
             break
@@ -858,10 +883,10 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
         case 21:
             
             
-            let latitude:Double = 40.4167754
-            let longitude:Double = -3.7037901999999576
+            let latitude:Double = 19.85627
+            let longitude:Double = 102.495496
             
-            let span = MKCoordinateSpanMake(25, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -877,11 +902,11 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of Spain is ...?"
-            button1.setTitle("Barcelona", for: UIControlState.normal)
-            button2.setTitle("Madrid", for: UIControlState.normal)
-            button3.setTitle("Paris", for: UIControlState.normal)
-            button4.setTitle("Valencia", for: UIControlState.normal)
+            questionLabel.text = "The capital of Laos is ...?"
+            button1.setTitle("Hanoi", for: UIControlState.normal)
+            button2.setTitle("Vientiane", for: UIControlState.normal)
+            button3.setTitle("Sana'a", for: UIControlState.normal)
+            button4.setTitle("Abu Dhabi", for: UIControlState.normal)
             
             correctAnswer = "2"
             break
@@ -890,10 +915,10 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
         case 22:
             
             
-            let latitude:Double = 47.497912
-            let longitude:Double = 19.04023499999994
+            let latitude:Double = 33.8937913
+            let longitude:Double = 35.50177669999994
             
-            let span = MKCoordinateSpanMake(25, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -909,11 +934,11 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of Hungary is ...?"
-            button1.setTitle("Bucharest", for: UIControlState.normal)
+            questionLabel.text = "The capital of Lebanon is ...?"
+            button1.setTitle("Abu Dhabi", for: UIControlState.normal)
             button2.setTitle("Belgrade", for: UIControlState.normal)
-            button3.setTitle("Budapest", for: UIControlState.normal)
-            button4.setTitle("Bratislava", for: UIControlState.normal)
+            button3.setTitle("Beirut", for: UIControlState.normal)
+            button4.setTitle("Ankara", for: UIControlState.normal)
             
             correctAnswer = "3"
             break
@@ -922,10 +947,10 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
         case 23:
             
             
-            let latitude:Double = 52.2296756
-            let longitude:Double = 21.012228700000037
+            let latitude:Double = 3.139003
+            let longitude:Double = 101.68685499999992
             
-            let span = MKCoordinateSpanMake(25, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -941,11 +966,11 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of Poland is ...?"
+            questionLabel.text = "The capital of Malaysia is ...?"
             button1.setTitle("Bratislava", for: UIControlState.normal)
-            button2.setTitle("Vilnius", for: UIControlState.normal)
-            button3.setTitle("Praga", for: UIControlState.normal)
-            button4.setTitle("Warsaw", for: UIControlState.normal)
+            button2.setTitle("Sana'a", for: UIControlState.normal)
+            button3.setTitle("Beirut", for: UIControlState.normal)
+            button4.setTitle("Kuala Lumpur", for: UIControlState.normal)
             
             correctAnswer = "4"
             break
@@ -954,10 +979,10 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
         case 24:
             
             
-            let latitude:Double = 50.0755381
-            let longitude:Double = 14.43780049999998
+            let latitude:Double = 1.9772276
+            let longitude:Double = 73.53610100000003
             
-            let span = MKCoordinateSpanMake(25, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -973,10 +998,10 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of Czech Republic is ...?"
-            button1.setTitle("Prague", for: UIControlState.normal)
-            button2.setTitle("Bucharest", for: UIControlState.normal)
-            button3.setTitle("Bratislava", for: UIControlState.normal)
+            questionLabel.text = "The capital of Maldives is ...?"
+            button1.setTitle("Male", for: UIControlState.normal)
+            button2.setTitle("Doha", for: UIControlState.normal)
+            button3.setTitle("Hanoi", for: UIControlState.normal)
             button4.setTitle("Ljubiana", for: UIControlState.normal)
             
             correctAnswer = "1"
@@ -985,10 +1010,10 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
         case 25:
             
             
-            let latitude:Double = 47.1410303
-            let longitude:Double = 9.520927700000016
+            let latitude:Double = 47.88639879999999
+            let longitude:Double = 106.90574390000006
             
-            let span = MKCoordinateSpanMake(25, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1004,21 +1029,21 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of Lichtenstein is ...?"
-            button1.setTitle("Vaduz", for: UIControlState.normal)
-            button2.setTitle("Sofia", for: UIControlState.normal)
-            button3.setTitle("Athens", for: UIControlState.normal)
-            button4.setTitle("Stockholm", for: UIControlState.normal)
+            questionLabel.text = "The capital of Mongolia is ...?"
+            button1.setTitle("Ulaanbaatar", for: UIControlState.normal)
+            button2.setTitle("Hanoi", for: UIControlState.normal)
+            button3.setTitle("Damscus", for: UIControlState.normal)
+            button4.setTitle("Manila", for: UIControlState.normal)
             
             correctAnswer = "1"
             break
         case 26:
             
             
-            let latitude:Double = 54.6871555
-            let longitude:Double = 25.279651400000034
+            let latitude:Double = 21.916221
+            let longitude:Double = 95.95597399999997
             
-            let span = MKCoordinateSpanMake(25, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1034,11 +1059,11 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of Lituania is ...?"
+            questionLabel.text = "The capital of Myanmar is ...?"
             button1.setTitle("Tallin", for: UIControlState.normal)
-            button2.setTitle("Riga", for: UIControlState.normal)
-            button3.setTitle("Vilnius", for: UIControlState.normal)
-            button4.setTitle("Helsinki", for: UIControlState.normal)
+            button2.setTitle("Bishkek", for: UIControlState.normal)
+            button3.setTitle("Napydaw", for: UIControlState.normal)
+            button4.setTitle("Ashgabat", for: UIControlState.normal)
             
             correctAnswer = "3"
             break
@@ -1046,10 +1071,10 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
         case 27:
             
             
-            let latitude:Double = 48.1485965
-            let longitude:Double = 17.107747700000004
+            let latitude:Double = 27.7172453
+            let longitude:Double = 85.3239605
             
-            let span = MKCoordinateSpanMake(25, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1065,11 +1090,11 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of Slovakia is ...?"
+            questionLabel.text = "The capital of Nepal is ...?"
             button1.setTitle("Bucharest", for: UIControlState.normal)
-            button2.setTitle("Budapest", for: UIControlState.normal)
-            button3.setTitle("Belgrade", for: UIControlState.normal)
-            button4.setTitle("Bratislava", for: UIControlState.normal)
+            button2.setTitle("Riyadh", for: UIControlState.normal)
+            button3.setTitle("Taipei", for: UIControlState.normal)
+            button4.setTitle("Kathmandu", for: UIControlState.normal)
             
             correctAnswer = "4"
             break
@@ -1077,10 +1102,10 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
         case 28:
             
             
-            let latitude:Double = 44.786568
-            let longitude:Double = 20.44892159999995
+            let latitude:Double = 23.58589
+            let longitude:Double = 58.40592270000002
             
-            let span = MKCoordinateSpanMake(25, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1096,11 +1121,11 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of Serbia is ...?"
-            button1.setTitle("Zurich", for: UIControlState.normal)
-            button2.setTitle("Zagreb", for: UIControlState.normal)
-            button3.setTitle("Belgrade", for: UIControlState.normal)
-            button4.setTitle("Ljubiana", for: UIControlState.normal)
+            questionLabel.text = "The capital of Oman is ...?"
+            button1.setTitle("Kathmandu", for: UIControlState.normal)
+            button2.setTitle("Islamabad", for: UIControlState.normal)
+            button3.setTitle("Muscat", for: UIControlState.normal)
+            button4.setTitle("Vientiane", for: UIControlState.normal)
             
             correctAnswer = "3"
             break
@@ -1108,10 +1133,10 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
         case 29:
             
             
-            let latitude:Double = 56.9496487
-            let longitude:Double = 24.10518639999998
+            let latitude:Double = 33.7293882
+            let longitude:Double = 73.09314610000001
             
-            let span = MKCoordinateSpanMake(25, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1127,11 +1152,11 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of Latvia is ...?"
-            button1.setTitle("Warsaw", for: UIControlState.normal)
-            button2.setTitle("Tallin", for: UIControlState.normal)
-            button3.setTitle("Vilnius", for: UIControlState.normal)
-            button4.setTitle("Riga", for: UIControlState.normal)
+            questionLabel.text = "The capital of Pakistan is ...?"
+            button1.setTitle("Ankara", for: UIControlState.normal)
+            button2.setTitle("Tashkent", for: UIControlState.normal)
+            button3.setTitle("Hanoi", for: UIControlState.normal)
+            button4.setTitle("Islamabad", for: UIControlState.normal)
             
             correctAnswer = "4"
             break
@@ -1140,10 +1165,10 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
         case 30:
             
             
-            let latitude:Double = 59.9138688
-            let longitude:Double = 10.752245399999993
+            let latitude:Double = 14.5995124
+            let longitude:Double = 120.9842195
             
-            let span = MKCoordinateSpanMake(25, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1159,11 +1184,11 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of Norway is ...?"
-            button1.setTitle("Copenhagen", for: UIControlState.normal)
-            button2.setTitle("Oslo", for: UIControlState.normal)
-            button3.setTitle("Stockholm", for: UIControlState.normal)
-            button4.setTitle("Helsinki", for: UIControlState.normal)
+            questionLabel.text = "The capital of Philippines is ...?"
+            button1.setTitle("Sana'a", for: UIControlState.normal)
+            button2.setTitle("Manila", for: UIControlState.normal)
+            button3.setTitle("Bishkek", for: UIControlState.normal)
+            button4.setTitle("Beirut", for: UIControlState.normal)
             
             correctAnswer = "2"
             break
@@ -1172,10 +1197,10 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
         case 31:
             
             
-            let latitude:Double = 46.0569465
-            let longitude:Double = 14.505751499999974
+            let latitude:Double = 25.354826
+            let longitude:Double = 51.183884000000035
             
-            let span = MKCoordinateSpanMake(25, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1191,11 +1216,11 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of Slovenia is ...?"
-            button1.setTitle("Zurich", for: UIControlState.normal)
-            button2.setTitle("Zagreb", for: UIControlState.normal)
-            button3.setTitle("Belgrade", for: UIControlState.normal)
-            button4.setTitle("Ljubiana", for: UIControlState.normal)
+            questionLabel.text = "The capital of Qatar is ...?"
+            button1.setTitle("Male", for: UIControlState.normal)
+            button2.setTitle("Dushanbe", for: UIControlState.normal)
+            button3.setTitle("Dubai", for: UIControlState.normal)
+            button4.setTitle("Doha", for: UIControlState.normal)
             
             correctAnswer = "4"
             break
@@ -1203,10 +1228,10 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
         case 32:
             
             
-            let latitude:Double = 64.12652059999999
-            let longitude:Double = -21.817439299999933
+            let latitude:Double = 24.7135517
+            let longitude:Double = 46.67529569999999
             
-            let span = MKCoordinateSpanMake(25, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1222,11 +1247,11 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of Iceland is ...?"
-            button1.setTitle("Reykjavik", for: UIControlState.normal)
+            questionLabel.text = "The capital of Saudi Arabia is ...?"
+            button1.setTitle("Riyadh", for: UIControlState.normal)
             button2.setTitle("Helsinky", for: UIControlState.normal)
-            button3.setTitle("Dublin", for: UIControlState.normal)
-            button4.setTitle("Amsterdam", for: UIControlState.normal)
+            button3.setTitle("Muscat", for: UIControlState.normal)
+            button4.setTitle("Hanoi", for: UIControlState.normal)
             
             correctAnswer = "1"
             break
@@ -1234,10 +1259,10 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
         case 33:
             
             
-            let latitude:Double = 44.4267674
-            let longitude:Double = 26.102538399999958
+            let latitude:Double = 1.3553794
+            let longitude:Double = 103.86774439999999
             
-            let span = MKCoordinateSpanMake(25, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1253,11 +1278,11 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of Romania is ...?"
-            button1.setTitle("Budapest", for: UIControlState.normal)
-            button2.setTitle("Bucharest", for: UIControlState.normal)
-            button3.setTitle("Belgrade", for: UIControlState.normal)
-            button4.setTitle("Bratislava", for: UIControlState.normal)
+            questionLabel.text = "The capital of Singapore is ...?"
+            button1.setTitle("Sana'a", for: UIControlState.normal)
+            button2.setTitle("Singapore", for: UIControlState.normal)
+            button3.setTitle("New Delhi", for: UIControlState.normal)
+            button4.setTitle("Doha", for: UIControlState.normal)
             
             correctAnswer = "2"
             break
@@ -1265,10 +1290,10 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
         case 34:
             
             
-            let latitude:Double = 52.3702157
-            let longitude:Double = 4.895167899999933
+            let latitude:Double = 7.873053999999999
+            let longitude:Double = 80.77179699999999
             
-            let span = MKCoordinateSpanMake(25, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1284,11 +1309,11 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of Netherlands is ...?"
-            button1.setTitle("Rotterdam", for: UIControlState.normal)
-            button2.setTitle("London", for: UIControlState.normal)
-            button3.setTitle("Bruxelles", for: UIControlState.normal)
-            button4.setTitle("Amsterdam", for: UIControlState.normal)
+            questionLabel.text = "The capital of Sri Lanka is ...?"
+            button1.setTitle("Kuala Lumpur", for: UIControlState.normal)
+            button2.setTitle("Ashgabat", for: UIControlState.normal)
+            button3.setTitle("Tashkent", for: UIControlState.normal)
+            button4.setTitle("Sri Jayawardenapura", for: UIControlState.normal)
             
             correctAnswer = "4"
             break
@@ -1296,10 +1321,10 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
         case 35:
             
             
-            let latitude:Double = 59.32932349999999
-            let longitude:Double = 18.068580800000063
+            let latitude:Double = 33.5138073
+            let longitude:Double = 36.27652790000002
             
-            let span = MKCoordinateSpanMake(25, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1315,11 +1340,11 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of Sweden is ...?"
-            button1.setTitle("Stockholm", for: UIControlState.normal)
-            button2.setTitle("Copenhagen", for: UIControlState.normal)
-            button3.setTitle("Oslo", for: UIControlState.normal)
-            button4.setTitle("Sarajevo", for: UIControlState.normal)
+            questionLabel.text = "The capital of Syria is ...?"
+            button1.setTitle("Damascus", for: UIControlState.normal)
+            button2.setTitle("Abu dhabi", for: UIControlState.normal)
+            button3.setTitle("Kathmandu", for: UIControlState.normal)
+            button4.setTitle("Doha", for: UIControlState.normal)
             
             correctAnswer = "1"
             break
@@ -1327,10 +1352,10 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
         case 36:
             
             
-            let latitude:Double = 60.16985569999999
-            let longitude:Double = 24.93837899999994
+            let latitude:Double = 25.0329636
+            let longitude:Double = 121.56542680000007
             
-            let span = MKCoordinateSpanMake(25, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1346,11 +1371,11 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of Finland is ...?"
-            button1.setTitle("Praga", for: UIControlState.normal)
-            button2.setTitle("Stockholm", for: UIControlState.normal)
-            button3.setTitle("Helsinki", for: UIControlState.normal)
-            button4.setTitle("Berna", for: UIControlState.normal)
+            questionLabel.text = "The capital of Taiwan is ...?"
+            button1.setTitle("Beijing", for: UIControlState.normal)
+            button2.setTitle("Muscat", for: UIControlState.normal)
+            button3.setTitle("Taipei", for: UIControlState.normal)
+            button4.setTitle("Manila", for: UIControlState.normal)
             
             correctAnswer = "3"
             break
@@ -1358,10 +1383,10 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
         case 37:
             
             
-            let latitude:Double = 35.89890849999999
-            let longitude:Double = 14.514552800000047
+            let latitude:Double = 37.9600766
+            let longitude:Double = 58.32606290000001
             
-            let span = MKCoordinateSpanMake(25, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1377,11 +1402,11 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of Malta is ...?"
-            button1.setTitle("Venice", for: UIControlState.normal)
+            questionLabel.text = "The capital of Tajikistan is ...?"
+            button1.setTitle("Taipei", for: UIControlState.normal)
             button2.setTitle("Vaduz", for: UIControlState.normal)
-            button3.setTitle("Vatican", for: UIControlState.normal)
-            button4.setTitle("Valleta", for: UIControlState.normal)
+            button3.setTitle("Ashgabat", for: UIControlState.normal)
+            button4.setTitle("Dushanbe", for: UIControlState.normal)
             
             correctAnswer = "4"
             break
@@ -1389,10 +1414,10 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
         case 38:
             
             
-            let latitude:Double = 59.43696079999999
-            let longitude:Double = 24.75357459999998
+            let latitude:Double = 13.7563309
+            let longitude:Double = 100.50176510000006
             
-            let span = MKCoordinateSpanMake(25, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1408,11 +1433,11 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of Estonia is ...?"
-            button1.setTitle("Tallin", for: UIControlState.normal)
+            questionLabel.text = "The capital of Thailand is ...?"
+            button1.setTitle("Bangkok", for: UIControlState.normal)
             button2.setTitle("Tiranna", for: UIControlState.normal)
-            button3.setTitle("Tronheim", for: UIControlState.normal)
-            button4.setTitle("Tiraspol", for: UIControlState.normal)
+            button3.setTitle("Ankara", for: UIControlState.normal)
+            button4.setTitle("Taipei", for: UIControlState.normal)
             
             correctAnswer = "1"
             break
@@ -1420,10 +1445,10 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
         case 39:
             
             
-            let latitude:Double = 41.90291599999999
-            let longitude:Double = 12.453389000000016
+            let latitude:Double = 38.969719
+            let longitude:Double = 59.55627800000002
             
-            let span = MKCoordinateSpanMake(25, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1439,11 +1464,11 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of Vatican is ...?"
-            button1.setTitle("Zagreb", for: UIControlState.normal)
-            button2.setTitle("Vatican", for: UIControlState.normal)
+            questionLabel.text = "The capital of Turkmenistan is ...?"
+            button1.setTitle("Dushanbe", for: UIControlState.normal)
+            button2.setTitle("Ashgabat", for: UIControlState.normal)
             button3.setTitle("Podgorica", for: UIControlState.normal)
-            button4.setTitle("Skopje", for: UIControlState.normal)
+            button4.setTitle("Muscat", for: UIControlState.normal)
             
             correctAnswer = "2"
             break
@@ -1451,10 +1476,10 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
         case 40:
             
             
-            let latitude:Double = 47.0104529
-            let longitude:Double = 28.86381030000007
+            let latitude:Double = 23.424076
+            let longitude:Double = 53.84781799999996
             
-            let span = MKCoordinateSpanMake(25, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1470,10 +1495,10 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of Moldova is ...?"
-            button1.setTitle("Chisinau", for: UIControlState.normal)
-            button2.setTitle("Bucharest", for: UIControlState.normal)
-            button3.setTitle("Kiev", for: UIControlState.normal)
+            questionLabel.text = "The capital of UAE is ...?"
+            button1.setTitle("Abu Dhabi", for: UIControlState.normal)
+            button2.setTitle("Doha", for: UIControlState.normal)
+            button3.setTitle("Riyadh", for: UIControlState.normal)
             button4.setTitle("Valletta", for: UIControlState.normal)
             
             correctAnswer = "1"
@@ -1482,10 +1507,10 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
         case 41:
             
             
-            let latitude:Double = 53.3498053
-            let longitude:Double = -6.260309699999993
+            let latitude:Double = 41.377491
+            let longitude:Double = 64.58526200000006
             
-            let span = MKCoordinateSpanMake(25, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1501,11 +1526,11 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of Ireland is ...?"
-            button1.setTitle("Cardiff", for: UIControlState.normal)
-            button2.setTitle("London", for: UIControlState.normal)
-            button3.setTitle("Dublin", for: UIControlState.normal)
-            button4.setTitle("Belfast", for: UIControlState.normal)
+            questionLabel.text = "The capital of Uzbekistan is ...?"
+            button1.setTitle("Male", for: UIControlState.normal)
+            button2.setTitle("Doha", for: UIControlState.normal)
+            button3.setTitle("Tashkent", for: UIControlState.normal)
+            button4.setTitle("Ashgabat", for: UIControlState.normal)
             
             correctAnswer = "3"
             break
@@ -1513,10 +1538,10 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
         case 42:
             
             
-            let latitude:Double = 48.85661400000001
-            let longitude:Double = 2.3522219000000177
+            let latitude:Double = 21.0277644
+            let longitude:Double = 105.83415979999995
             
-            let span = MKCoordinateSpanMake(25, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1532,11 +1557,11 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of France is ...?"
-            button1.setTitle("Marseille", for: UIControlState.normal)
-            button2.setTitle("Monaco", for: UIControlState.normal)
-            button3.setTitle("Paris", for: UIControlState.normal)
-            button4.setTitle("Amsterdam", for: UIControlState.normal)
+            questionLabel.text = "The capital of Vietnam is ...?"
+            button1.setTitle("Beirut", for: UIControlState.normal)
+            button2.setTitle("Doha", for: UIControlState.normal)
+            button3.setTitle("Hanoi", for: UIControlState.normal)
+            button4.setTitle("Bangkok", for: UIControlState.normal)
             
             correctAnswer = "3"
             break
@@ -1544,10 +1569,10 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
         case 43:
             
             
-            let latitude:Double = 55.6760968
-            let longitude:Double = 12.568337100000008
+            let latitude:Double = 15.552727
+            let longitude:Double = 48.516388000000006
             
-            let span = MKCoordinateSpanMake(25, 25)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1563,108 +1588,18 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
             
             
             
-            questionLabel.text = "The capital of Denmark is ...?"
-            button1.setTitle("Osolo", for: UIControlState.normal)
-            button2.setTitle("Copenhagen", for: UIControlState.normal)
+            questionLabel.text = "The capital of Yemen is ...?"
+            button1.setTitle("Dhaka", for: UIControlState.normal)
+            button2.setTitle("Sana'a", for: UIControlState.normal)
             button3.setTitle("Sofia", for: UIControlState.normal)
-            button4.setTitle("Ankara", for: UIControlState.normal)
+            button4.setTitle("Beirut", for: UIControlState.normal)
             
             correctAnswer = "2"
             break
 
-        case 44:
-            
-            
-            let latitude:Double = 38.7222524
-            let longitude:Double = -9.139336599999979
-            
-            let span = MKCoordinateSpanMake(25, 25)
-            let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
-            
-            mapView.setRegion(region, animated: true)
-            
-            let pinLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
-            
-            let objectAnn = MKPointAnnotation()
-            objectAnn.coordinate = pinLocation
-            
-            self.mapView.addAnnotation(objectAnn)
-            
-            
-            
-            
-            
-            questionLabel.text = "The capital of Portugal is ...?"
-            button1.setTitle("Porto", for: UIControlState.normal)
-            button2.setTitle("Lisbon", for: UIControlState.normal)
-            button3.setTitle("Madrid", for: UIControlState.normal)
-            button4.setTitle("Bilbao", for: UIControlState.normal)
-            
-            correctAnswer = "2"
-            break
+        
 
-        case 45:
-            
-            
-            let latitude:Double = 46.9479739
-            let longitude:Double = 7.447446799999966
-            
-            let span = MKCoordinateSpanMake(25, 25)
-            let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
-            
-            mapView.setRegion(region, animated: true)
-            
-            let pinLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
-            
-            let objectAnn = MKPointAnnotation()
-            objectAnn.coordinate = pinLocation
-            
-            self.mapView.addAnnotation(objectAnn)
-            
-            
-            
-            
-            
-            questionLabel.text = "The capital of Swizerland is ...?"
-            button1.setTitle("Brasov", for: UIControlState.normal)
-            button2.setTitle("Bratislava", for: UIControlState.normal)
-            button3.setTitle("Belgrade", for: UIControlState.normal)
-            button4.setTitle("Bern", for: UIControlState.normal)
-            
-            correctAnswer = "4"
-            break
-
-            
-        case 46:
-            
-            
-            let latitude:Double = 37.9838096
-            let longitude:Double = 23.727538800000048
-            
-            let span = MKCoordinateSpanMake(25, 25)
-            let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
-            
-            mapView.setRegion(region, animated: true)
-            
-            let pinLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
-            
-            let objectAnn = MKPointAnnotation()
-            objectAnn.coordinate = pinLocation
-            
-            self.mapView.addAnnotation(objectAnn)
-            
-            
-            
-            
-            
-            questionLabel.text = "The capital of Greece is ...?"
-            button1.setTitle("Ankara", for: UIControlState.normal)
-            button2.setTitle("Athens", for: UIControlState.normal)
-            button3.setTitle("Thesaloniki", for: UIControlState.normal)
-            button4.setTitle("Viena", for: UIControlState.normal)
-            
-            correctAnswer = "2"
-            break
+        
 
             
         default:
@@ -1726,7 +1661,7 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
                 button4.backgroundColor = UIColor.green
                
             }
-            if countQuestions == 46 {
+            if countQuestions == 43 {
                 unhideButtons()
             }
             
@@ -1785,7 +1720,7 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
                 button4.backgroundColor = UIColor.green
                 
             }
-            if countQuestions == 46 {
+            if countQuestions == 43 {
                 unhideButtons()
             }
             
@@ -1847,7 +1782,7 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
                 button4.backgroundColor = UIColor.green
                 
             }
-            if countQuestions == 46 {
+            if countQuestions == 43 {
                 unhideButtons()
             }
             
@@ -1906,7 +1841,7 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
                 button1.backgroundColor = UIColor.green
                
             }
-            if countQuestions == 46 {
+            if countQuestions == 43 {
                 unhideButtons()
             }
             
@@ -1944,7 +1879,7 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
         
        
         countQuestions += 1
-        countQuestionsLabel.text = String("Question: \(countQuestions)/46")
+        countQuestionsLabel.text = String("Q: \(countQuestions)/43")
        
         
         
@@ -1957,13 +1892,13 @@ class SecoundViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func finishButton(_ sender: Any) {
         
-       randomQuestionArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46]
+       randomQuestionArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43]
         
         livesNumber = 3
         countQuestions = 1
         
        livesLabel.text = String("Lives: \(livesNumber)")
-        countQuestionsLabel.text = String("Question: \(countQuestions)/46")
+        countQuestionsLabel.text = String("Q: \(countQuestions)/43")
         
         enable()
         removeTextColor()

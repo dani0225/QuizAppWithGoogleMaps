@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		841AF5F31EF947D50021BF81 /* celCorect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841AF5F21EF947D50021BF81 /* celCorect.swift */; };
-		841F0F761EF2BF07007ADE26 /* alTreilea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841F0F751EF2BF07007ADE26 /* alTreilea.swift */; };
+		84590C8B1F00FAAF00DFD0E7 /* Asia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84590C8A1F00FAAF00DFD0E7 /* Asia.swift */; };
 		845A9D2B1E3E240F00EE1167 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A9D2A1E3E240F00EE1167 /* AppDelegate.swift */; };
 		845A9D321E3E240F00EE1167 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 845A9D311E3E240F00EE1167 /* Assets.xcassets */; };
 		845A9D351E3E240F00EE1167 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845A9D331E3E240F00EE1167 /* LaunchScreen.storyboard */; };
@@ -40,7 +40,7 @@
 
 /* Begin PBXFileReference section */
 		841AF5F21EF947D50021BF81 /* celCorect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = celCorect.swift; sourceTree = "<group>"; };
-		841F0F751EF2BF07007ADE26 /* alTreilea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = alTreilea.swift; sourceTree = "<group>"; };
+		84590C8A1F00FAAF00DFD0E7 /* Asia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asia.swift; sourceTree = "<group>"; };
 		845A9D271E3E240F00EE1167 /* digitalClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = digitalClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		845A9D2A1E3E240F00EE1167 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		845A9D311E3E240F00EE1167 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -114,8 +114,8 @@
 				84B62A6E1E505D3F00C760F2 /* Storyboard.storyboard */,
 				84C47CD61E59E2D90021EE5C /* menuViewController.swift */,
 				84B62A701E507EB400C760F2 /* SecoundViewController.swift */,
-				841F0F751EF2BF07007ADE26 /* alTreilea.swift */,
 				841AF5F21EF947D50021BF81 /* celCorect.swift */,
+				84590C8A1F00FAAF00DFD0E7 /* Asia.swift */,
 				845A9D311E3E240F00EE1167 /* Assets.xcassets */,
 				845A9D331E3E240F00EE1167 /* LaunchScreen.storyboard */,
 				845A9D361E3E240F00EE1167 /* Info.plist */,
@@ -289,8 +289,8 @@
 			files = (
 				841AF5F31EF947D50021BF81 /* celCorect.swift in Sources */,
 				84C47CD71E59E2D90021EE5C /* menuViewController.swift in Sources */,
-				841F0F761EF2BF07007ADE26 /* alTreilea.swift in Sources */,
 				84B62A711E507EB400C760F2 /* SecoundViewController.swift in Sources */,
+				84590C8B1F00FAAF00DFD0E7 /* Asia.swift in Sources */,
 				845A9D2B1E3E240F00EE1167 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

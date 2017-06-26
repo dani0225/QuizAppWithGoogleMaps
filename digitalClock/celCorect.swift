@@ -34,7 +34,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var nextQuestionOutlet: UIButton!
    
     @IBOutlet var livesLabel: UILabel!
-    @IBOutlet var heartLabel: UIImageView!
+    
 
     
     @IBOutlet var finishOutlet: UIButton!
@@ -225,21 +225,6 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
         )
     
         
-        heartLabel.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
-        
-        UIView.animate(withDuration: 1.0,
-                       delay: 0,
-                       usingSpringWithDamping: CGFloat(0.20),
-                       initialSpringVelocity: CGFloat(6.0),
-                       options: UIViewAnimationOptions.allowUserInteraction,
-                       animations: {
-                        self.heartLabel.transform = CGAffineTransform.identity
-        },
-                       completion: { Void in()  }
-        )
-        
-        
-    
       
         
     }
@@ -317,7 +302,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 40.143105
             let longitude:Double = 47.57692700000007
             
-            let span = MKCoordinateSpanMake(45, 45)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -376,7 +361,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 50.503887
             let longitude:Double = 4.4699359999999615
             
-            let span = MKCoordinateSpanMake(45, 45)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -405,7 +390,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 43.915886
             let longitude:Double = 17.67907600000001
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -433,7 +418,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 41.153332
             let longitude:Double = 20.168330999999966
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -462,7 +447,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 42.506285
             let longitude:Double = 1.5218009999999822
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -491,7 +476,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 40.069099
             let longitude:Double = 45.03818899999999
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -520,7 +505,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 47.516231
             let longitude:Double = 14.550072
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -549,7 +534,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 42.733883
             let longitude:Double = 25.485829999999964
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -579,7 +564,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 45.8150108
             let longitude:Double = 15.981919000000062
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -610,7 +595,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 39.9333635
             let longitude:Double = 32.85974190000002
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -642,7 +627,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 41.9973462
             let longitude:Double = 21.42799560000003
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -674,7 +659,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 51.5073509
             let longitude:Double = -0.12775829999998223
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -706,7 +691,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 42.43041960000001
             let longitude:Double = 19.259364199999936
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -738,7 +723,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 41.90278349999999
             let longitude:Double = 12.496365500000024
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -770,7 +755,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 55.755826
             let longitude:Double = 37.6173
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -802,7 +787,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 52.52000659999999
             let longitude:Double = 13.404953999999975
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -834,7 +819,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 50.4501
             let longitude:Double = 30.523400000000038
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -866,7 +851,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 41.7151377
             let longitude:Double = 44.82709599999998
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -898,7 +883,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 40.4167754
             let longitude:Double = -3.7037901999999576
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -930,7 +915,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 47.497912
             let longitude:Double = 19.04023499999994
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -962,7 +947,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 52.2296756
             let longitude:Double = 21.012228700000037
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -994,7 +979,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 50.0755381
             let longitude:Double = 14.43780049999998
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1025,7 +1010,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 47.1410303
             let longitude:Double = 9.520927700000016
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1055,7 +1040,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 54.6871555
             let longitude:Double = 25.279651400000034
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1086,7 +1071,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 48.1485965
             let longitude:Double = 17.107747700000004
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1117,7 +1102,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 44.786568
             let longitude:Double = 20.44892159999995
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1148,7 +1133,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 56.9496487
             let longitude:Double = 24.10518639999998
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1180,7 +1165,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 59.9138688
             let longitude:Double = 10.752245399999993
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1212,7 +1197,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 46.0569465
             let longitude:Double = 14.505751499999974
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1243,7 +1228,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 64.12652059999999
             let longitude:Double = -21.817439299999933
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1274,7 +1259,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 44.4267674
             let longitude:Double = 26.102538399999958
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1305,7 +1290,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 52.3702157
             let longitude:Double = 4.895167899999933
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1336,7 +1321,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 59.32932349999999
             let longitude:Double = 18.068580800000063
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1367,7 +1352,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 60.16985569999999
             let longitude:Double = 24.93837899999994
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1398,7 +1383,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 35.89890849999999
             let longitude:Double = 14.514552800000047
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1429,7 +1414,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 59.43696079999999
             let longitude:Double = 24.75357459999998
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1460,7 +1445,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 41.90291599999999
             let longitude:Double = 12.453389000000016
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1491,7 +1476,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 47.0104529
             let longitude:Double = 28.86381030000007
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1522,7 +1507,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 53.3498053
             let longitude:Double = -6.260309699999993
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1553,7 +1538,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 48.85661400000001
             let longitude:Double = 2.3522219000000177
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1584,7 +1569,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 55.6760968
             let longitude:Double = 12.568337100000008
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1615,7 +1600,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 38.7222524
             let longitude:Double = -9.139336599999979
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1646,7 +1631,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 46.9479739
             let longitude:Double = 7.447446799999966
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
@@ -1678,7 +1663,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             let latitude:Double = 37.9838096
             let longitude:Double = 23.727538800000048
             
-            let span = MKCoordinateSpanMake(46, 46)
+            let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
             
             mapView.setRegion(region, animated: true)
