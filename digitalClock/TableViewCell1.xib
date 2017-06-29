@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="407" id="KGk-i7-Jjw" customClass="TableViewCell1" customModule="digitalClock" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="407"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="407"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Jh-r2-0ub">
+                        <rect key="frame" x="0.0" y="41" width="320" height="366"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scM-jH-gNF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="scM-jH-gNF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="7o8-j3-dBk"/>
+                    <constraint firstItem="scM-jH-gNF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="UFP-3E-4Vv"/>
+                    <constraint firstItem="5Jh-r2-0ub" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="ZeO-jI-Hsq"/>
+                    <constraint firstAttribute="bottom" secondItem="5Jh-r2-0ub" secondAttribute="bottom" id="c0d-Vb-Gya"/>
+                    <constraint firstItem="5Jh-r2-0ub" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.9" id="f0c-9E-TU8"/>
+                    <constraint firstAttribute="trailing" secondItem="scM-jH-gNF" secondAttribute="trailing" id="h2g-wd-vA1"/>
+                    <constraint firstAttribute="trailing" secondItem="5Jh-r2-0ub" secondAttribute="trailing" id="pMK-ba-EVr"/>
+                    <constraint firstItem="5Jh-r2-0ub" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="qJU-j1-f8n"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="mainImageView" destination="5Jh-r2-0ub" id="OO8-bH-sKZ"/>
+            </connections>
+            <point key="canvasLocation" x="26" y="8.5"/>
+        </tableViewCell>
+    </objects>
+</document>

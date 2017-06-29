@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8407E36F1F02F46D007DBABB /* aaf.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8407E36E1F02F46D007DBABB /* aaf.jpg */; };
 		841AF5F31EF947D50021BF81 /* celCorect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841AF5F21EF947D50021BF81 /* celCorect.swift */; };
 		84590C8B1F00FAAF00DFD0E7 /* Asia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84590C8A1F00FAAF00DFD0E7 /* Asia.swift */; };
 		845A9D2B1E3E240F00EE1167 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A9D2A1E3E240F00EE1167 /* AppDelegate.swift */; };
@@ -14,11 +15,15 @@
 		845A9D351E3E240F00EE1167 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845A9D331E3E240F00EE1167 /* LaunchScreen.storyboard */; };
 		845A9D401E3E240F00EE1167 /* digitalClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A9D3F1E3E240F00EE1167 /* digitalClockTests.swift */; };
 		845A9D4B1E3E240F00EE1167 /* digitalClockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A9D4A1E3E240F00EE1167 /* digitalClockUITests.swift */; };
+		8467A0231F0244B300FC7331 /* NorthAmerica.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467A0221F0244B300FC7331 /* NorthAmerica.swift */; };
+		8467A0251F0258D300FC7331 /* northAmerica.png in Resources */ = {isa = PBXBuildFile; fileRef = 8467A0241F0258D300FC7331 /* northAmerica.png */; };
+		8467A02B1F025BE900FC7331 /* southAme.png in Resources */ = {isa = PBXBuildFile; fileRef = 8467A02A1F025BE900FC7331 /* southAme.png */; };
 		84B62A6F1E505D3F00C760F2 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B62A6E1E505D3F00C760F2 /* Storyboard.storyboard */; };
-		84B62A711E507EB400C760F2 /* SecoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B62A701E507EB400C760F2 /* SecoundViewController.swift */; };
 		84B62A741E50848900C760F2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B62A731E50848900C760F2 /* MapKit.framework */; };
 		84B62A761E5087F600C760F2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B62A751E5087F600C760F2 /* CoreLocation.framework */; };
-		84C47CD71E59E2D90021EE5C /* menuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C47CD61E59E2D90021EE5C /* menuViewController.swift */; };
+		84BE293D1F0132B10032C3C0 /* SouthAmerica.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BE293C1F0132B10032C3C0 /* SouthAmerica.swift */; };
+		84F97EAF1F03ECE000B78A70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F97EAE1F03ECE000B78A70 /* ViewController.swift */; };
+		84F97EB11F03F02E00B78A70 /* customCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F97EB01F03F02E00B78A70 /* customCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8407E36E1F02F46D007DBABB /* aaf.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = aaf.jpg; sourceTree = "<group>"; };
 		841AF5F21EF947D50021BF81 /* celCorect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = celCorect.swift; sourceTree = "<group>"; };
 		84590C8A1F00FAAF00DFD0E7 /* Asia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asia.swift; sourceTree = "<group>"; };
 		845A9D271E3E240F00EE1167 /* digitalClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = digitalClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,11 +58,15 @@
 		845A9D461E3E240F00EE1167 /* digitalClockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = digitalClockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		845A9D4A1E3E240F00EE1167 /* digitalClockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = digitalClockUITests.swift; sourceTree = "<group>"; };
 		845A9D4C1E3E240F00EE1167 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8467A0221F0244B300FC7331 /* NorthAmerica.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NorthAmerica.swift; sourceTree = "<group>"; };
+		8467A0241F0258D300FC7331 /* northAmerica.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = northAmerica.png; sourceTree = "<group>"; };
+		8467A02A1F025BE900FC7331 /* southAme.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = southAme.png; sourceTree = "<group>"; };
 		84B62A6E1E505D3F00C760F2 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
-		84B62A701E507EB400C760F2 /* SecoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecoundViewController.swift; sourceTree = "<group>"; };
 		84B62A731E50848900C760F2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		84B62A751E5087F600C760F2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		84C47CD61E59E2D90021EE5C /* menuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuViewController.swift; sourceTree = "<group>"; };
+		84BE293C1F0132B10032C3C0 /* SouthAmerica.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SouthAmerica.swift; sourceTree = "<group>"; };
+		84F97EAE1F03ECE000B78A70 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
+		84F97EB01F03F02E00B78A70 /* customCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,15 +120,20 @@
 		845A9D291E3E240F00EE1167 /* digitalClock */ = {
 			isa = PBXGroup;
 			children = (
+				84F97EAE1F03ECE000B78A70 /* ViewController.swift */,
 				845A9D2A1E3E240F00EE1167 /* AppDelegate.swift */,
 				84B62A6E1E505D3F00C760F2 /* Storyboard.storyboard */,
-				84C47CD61E59E2D90021EE5C /* menuViewController.swift */,
-				84B62A701E507EB400C760F2 /* SecoundViewController.swift */,
 				841AF5F21EF947D50021BF81 /* celCorect.swift */,
 				84590C8A1F00FAAF00DFD0E7 /* Asia.swift */,
+				84BE293C1F0132B10032C3C0 /* SouthAmerica.swift */,
+				8467A0221F0244B300FC7331 /* NorthAmerica.swift */,
 				845A9D311E3E240F00EE1167 /* Assets.xcassets */,
 				845A9D331E3E240F00EE1167 /* LaunchScreen.storyboard */,
+				8467A02A1F025BE900FC7331 /* southAme.png */,
+				8407E36E1F02F46D007DBABB /* aaf.jpg */,
+				8467A0241F0258D300FC7331 /* northAmerica.png */,
 				845A9D361E3E240F00EE1167 /* Info.plist */,
+				84F97EB01F03F02E00B78A70 /* customCell.swift */,
 			);
 			path = digitalClock;
 			sourceTree = "<group>";
@@ -260,7 +275,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8467A0251F0258D300FC7331 /* northAmerica.png in Resources */,
+				8467A02B1F025BE900FC7331 /* southAme.png in Resources */,
 				845A9D351E3E240F00EE1167 /* LaunchScreen.storyboard in Resources */,
+				8407E36F1F02F46D007DBABB /* aaf.jpg in Resources */,
 				845A9D321E3E240F00EE1167 /* Assets.xcassets in Resources */,
 				84B62A6F1E505D3F00C760F2 /* Storyboard.storyboard in Resources */,
 			);
@@ -287,9 +305,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84F97EAF1F03ECE000B78A70 /* ViewController.swift in Sources */,
+				84BE293D1F0132B10032C3C0 /* SouthAmerica.swift in Sources */,
+				84F97EB11F03F02E00B78A70 /* customCell.swift in Sources */,
 				841AF5F31EF947D50021BF81 /* celCorect.swift in Sources */,
-				84C47CD71E59E2D90021EE5C /* menuViewController.swift in Sources */,
-				84B62A711E507EB400C760F2 /* SecoundViewController.swift in Sources */,
+				8467A0231F0244B300FC7331 /* NorthAmerica.swift in Sources */,
 				84590C8B1F00FAAF00DFD0E7 /* Asia.swift in Sources */,
 				845A9D2B1E3E240F00EE1167 /* AppDelegate.swift in Sources */,
 			);

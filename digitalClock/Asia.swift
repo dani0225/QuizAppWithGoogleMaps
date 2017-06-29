@@ -505,8 +505,8 @@ class Asia: UIViewController, CLLocationManagerDelegate {
         case 8:
             
             
-            let latitude:Double = 39.90419989999999
-            let longitude:Double = 116.40739630000007
+            let latitude:Double = 20.593684
+            let longitude:Double = 78.96288000000004
             
             let span = MKCoordinateSpanMake(36, 36)
             let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), span: span)
