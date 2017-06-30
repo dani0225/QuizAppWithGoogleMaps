@@ -11,7 +11,7 @@ import UIKit
 class customCell: UITableViewCell {
     
     
-    @IBOutlet var nameTitleLabel: UILabel!
+   
     
     @IBOutlet var myImage: UIImageView!
     
@@ -26,5 +26,7 @@ class customCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+  
 
 }

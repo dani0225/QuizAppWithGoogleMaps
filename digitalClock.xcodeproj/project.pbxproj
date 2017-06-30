@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8407E36F1F02F46D007DBABB /* aaf.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8407E36E1F02F46D007DBABB /* aaf.jpg */; };
 		841AF5F31EF947D50021BF81 /* celCorect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841AF5F21EF947D50021BF81 /* celCorect.swift */; };
+		843659451F050C5D00E47725 /* detist.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 843659441F050C5D00E47725 /* detist.jpg */; };
 		84590C8B1F00FAAF00DFD0E7 /* Asia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84590C8A1F00FAAF00DFD0E7 /* Asia.swift */; };
 		845A9D2B1E3E240F00EE1167 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A9D2A1E3E240F00EE1167 /* AppDelegate.swift */; };
 		845A9D321E3E240F00EE1167 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 845A9D311E3E240F00EE1167 /* Assets.xcassets */; };
@@ -18,6 +19,9 @@
 		8467A0231F0244B300FC7331 /* NorthAmerica.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8467A0221F0244B300FC7331 /* NorthAmerica.swift */; };
 		8467A0251F0258D300FC7331 /* northAmerica.png in Resources */ = {isa = PBXBuildFile; fileRef = 8467A0241F0258D300FC7331 /* northAmerica.png */; };
 		8467A02B1F025BE900FC7331 /* southAme.png in Resources */ = {isa = PBXBuildFile; fileRef = 8467A02A1F025BE900FC7331 /* southAme.png */; };
+		84796A161F063A3C003CF86F /* Molle-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84796A151F063A3C003CF86F /* Molle-Regular.ttf */; };
+		84796A181F063ECB003CF86F /* Akronim-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84796A171F063ECB003CF86F /* Akronim-Regular.ttf */; };
+		84A3AE2F1F04F74300E6D82F /* Pis.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84A3AE2E1F04F74300E6D82F /* Pis.jpg */; };
 		84B62A6F1E505D3F00C760F2 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B62A6E1E505D3F00C760F2 /* Storyboard.storyboard */; };
 		84B62A741E50848900C760F2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B62A731E50848900C760F2 /* MapKit.framework */; };
 		84B62A761E5087F600C760F2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B62A751E5087F600C760F2 /* CoreLocation.framework */; };
@@ -46,6 +50,7 @@
 /* Begin PBXFileReference section */
 		8407E36E1F02F46D007DBABB /* aaf.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = aaf.jpg; sourceTree = "<group>"; };
 		841AF5F21EF947D50021BF81 /* celCorect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = celCorect.swift; sourceTree = "<group>"; };
+		843659441F050C5D00E47725 /* detist.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = detist.jpg; sourceTree = "<group>"; };
 		84590C8A1F00FAAF00DFD0E7 /* Asia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asia.swift; sourceTree = "<group>"; };
 		845A9D271E3E240F00EE1167 /* digitalClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = digitalClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		845A9D2A1E3E240F00EE1167 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +66,9 @@
 		8467A0221F0244B300FC7331 /* NorthAmerica.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NorthAmerica.swift; sourceTree = "<group>"; };
 		8467A0241F0258D300FC7331 /* northAmerica.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = northAmerica.png; sourceTree = "<group>"; };
 		8467A02A1F025BE900FC7331 /* southAme.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = southAme.png; sourceTree = "<group>"; };
+		84796A151F063A3C003CF86F /* Molle-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Molle-Regular.ttf"; sourceTree = "<group>"; };
+		84796A171F063ECB003CF86F /* Akronim-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Akronim-Regular.ttf"; sourceTree = "<group>"; };
+		84A3AE2E1F04F74300E6D82F /* Pis.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Pis.jpg; sourceTree = "<group>"; };
 		84B62A6E1E505D3F00C760F2 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		84B62A731E50848900C760F2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		84B62A751E5087F600C760F2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -96,6 +104,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		843659461F0545C100E47725 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				8467A0241F0258D300FC7331 /* northAmerica.png */,
+				8407E36E1F02F46D007DBABB /* aaf.jpg */,
+				8467A02A1F025BE900FC7331 /* southAme.png */,
+				843659441F050C5D00E47725 /* detist.jpg */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		845A9D1E1E3E240F00EE1167 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +139,8 @@
 		845A9D291E3E240F00EE1167 /* digitalClock */ = {
 			isa = PBXGroup;
 			children = (
+				84796A191F063ED5003CF86F /* Fonts */,
+				843659461F0545C100E47725 /* images */,
 				84F97EAE1F03ECE000B78A70 /* ViewController.swift */,
 				845A9D2A1E3E240F00EE1167 /* AppDelegate.swift */,
 				84B62A6E1E505D3F00C760F2 /* Storyboard.storyboard */,
@@ -129,9 +150,7 @@
 				8467A0221F0244B300FC7331 /* NorthAmerica.swift */,
 				845A9D311E3E240F00EE1167 /* Assets.xcassets */,
 				845A9D331E3E240F00EE1167 /* LaunchScreen.storyboard */,
-				8467A02A1F025BE900FC7331 /* southAme.png */,
-				8407E36E1F02F46D007DBABB /* aaf.jpg */,
-				8467A0241F0258D300FC7331 /* northAmerica.png */,
+				84A3AE2E1F04F74300E6D82F /* Pis.jpg */,
 				845A9D361E3E240F00EE1167 /* Info.plist */,
 				84F97EB01F03F02E00B78A70 /* customCell.swift */,
 			);
@@ -154,6 +173,15 @@
 				845A9D4C1E3E240F00EE1167 /* Info.plist */,
 			);
 			path = digitalClockUITests;
+			sourceTree = "<group>";
+		};
+		84796A191F063ED5003CF86F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				84796A171F063ECB003CF86F /* Akronim-Regular.ttf */,
+				84796A151F063A3C003CF86F /* Molle-Regular.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		84B62A721E50848900C760F2 /* Frameworks */ = {
@@ -275,12 +303,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A3AE2F1F04F74300E6D82F /* Pis.jpg in Resources */,
 				8467A0251F0258D300FC7331 /* northAmerica.png in Resources */,
 				8467A02B1F025BE900FC7331 /* southAme.png in Resources */,
 				845A9D351E3E240F00EE1167 /* LaunchScreen.storyboard in Resources */,
 				8407E36F1F02F46D007DBABB /* aaf.jpg in Resources */,
 				845A9D321E3E240F00EE1167 /* Assets.xcassets in Resources */,
+				843659451F050C5D00E47725 /* detist.jpg in Resources */,
+				84796A161F063A3C003CF86F /* Molle-Regular.ttf in Resources */,
 				84B62A6F1E505D3F00C760F2 /* Storyboard.storyboard in Resources */,
+				84796A181F063ECB003CF86F /* Akronim-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

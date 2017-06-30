@@ -12,16 +12,35 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     
+    @IBOutlet var topImageView: UIImageView!
+    
+    
+    
+    
     @IBOutlet var tableViewMy: UITableView!
     
     
-    var names = ["Africa"]
+    @IBAction func switchCustomTableViewAction(_ sender: UISegmentedControl)
+    {
+        p = sender.selectedSegmentIndex
+        tableViewMy.reloadData()
+        
+        
+        
+        
+    }
     
     
+    
+   
+    
+    var names = ["detist", "Pis"]
+    
+    var p: Int!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return names.count
+        return 1
     }
     
     
@@ -30,8 +49,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCellMy", for: indexPath) as! customCell
         
-    cell.nameTitleLabel.text = names[indexPath.row]
-    cell.myImage.image = UIImage(named: "aaf.jpg")
+
+    cell.myImage.image = UIImage(named: names[p] + ".jpg")
+        
         
         return cell
     }
@@ -48,6 +68,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
         tableViewMy.delegate = self
         tableViewMy.dataSource = self
+        
+        p = 0
+        
+         let newLayer = CAGradientLayer()
+        newLayer.colors = [ UIColor.red.cgColor, UIColor.blue.cgColor]
+        newLayer.frame = topImageView.frame
+        
+        newLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
+        newLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
+        
+        topImageView.layer.addSublayer(newLayer)
+        
+        
+        
         
         // Do any additional setup after loading the view.
     }
