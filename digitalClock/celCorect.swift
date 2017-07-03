@@ -61,10 +61,10 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
 
         
-        button1.layer.cornerRadius = 15
-        button2.layer.cornerRadius = 15
-        button3.layer.cornerRadius = 15
-        button4.layer.cornerRadius = 15
+        button1.layer.cornerRadius = 20
+        button2.layer.cornerRadius = 20
+        button3.layer.cornerRadius = 20
+        button4.layer.cornerRadius = 20
         
         nextQuestionOutlet.isHidden = true
         
@@ -179,17 +179,17 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
     func removeTextColor() {
         
         
-        button1.backgroundColor = UIColor(red:106/255, green:207/255, blue:255/255, alpha: 1.0)
-       button2.backgroundColor = UIColor(red:106/255, green:207/255, blue:255/255, alpha: 1.0)
-        button3.backgroundColor = UIColor(red:106/255, green:207/255, blue:255/255, alpha: 1.0)
-        button4.backgroundColor = UIColor(red:106/255, green:207/255, blue:255/255, alpha: 1.0)
+        button1.backgroundColor = UIColor(red:206/255, green:180/255, blue:187/255, alpha: 0.4)
+       button2.backgroundColor = UIColor(red:206/255, green:180/255, blue:187/255, alpha: 0.4)
+        button3.backgroundColor = UIColor(red:206/255, green:180/255, blue:187/255, alpha: 0.4)
+        button4.backgroundColor = UIColor(red:206/255, green:180/255, blue:187/255, alpha: 0.4)
         
         
         
-        button1.setTitleColor(UIColor.blue, for: UIControlState.normal)
-        button2.setTitleColor(UIColor.blue, for: UIControlState.normal)
-        button3.setTitleColor(UIColor.blue, for: UIControlState.normal)
-        button4.setTitleColor(UIColor.blue, for: UIControlState.normal)
+        button1.setTitleColor(UIColor.white, for: UIControlState.normal)
+        button2.setTitleColor(UIColor.white, for: UIControlState.normal)
+        button3.setTitleColor(UIColor.white, for: UIControlState.normal)
+        button4.setTitleColor(UIColor.white, for: UIControlState.normal)
         
         
         

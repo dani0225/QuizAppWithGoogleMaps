@@ -17,6 +17,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     
+    @IBOutlet var bottomImageView: UIImageView!
+    
+    
+    
     @IBOutlet var tableViewMy: UITableView!
     
     
@@ -34,7 +38,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
    
     
-    var names = ["detist", "Pis"]
+    var names = ["peisajAfrica", "landscapeEurope","landscapeUsa","landscapeAmazon","landscapeAsia"]
     
     var p: Int!
     
@@ -51,6 +55,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
 
     cell.myImage.image = UIImage(named: names[p] + ".jpg")
+        UIView.transition(with: cell.myImage, duration: 0.3, options: [.transitionCurlDown], animations: {
+            cell.myImage.image = UIImage(named: self.names[self.p] + ".jpg")
+        })
+     
         
         
         return cell
@@ -79,6 +87,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         newLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
         
         topImageView.layer.addSublayer(newLayer)
+        
+        
+        
+        
+        
+      
+        
+        
         
         
         

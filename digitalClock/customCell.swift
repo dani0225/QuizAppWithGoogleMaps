@@ -16,6 +16,13 @@ class customCell: UITableViewCell {
     @IBOutlet var myImage: UIImageView!
     
 
+    func setup(image: UIImage)
+    {
+        self.myImage.image = image
+    }
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
