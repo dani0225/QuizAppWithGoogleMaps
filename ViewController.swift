@@ -8,11 +8,29 @@
 
 import UIKit
 
+
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
     
     @IBOutlet var topImageView: UIImageView!
+    
+    
+    
+    @IBAction func presentScene(_ sender: Any)
+    {
+        
+        performSegue(withIdentifier: names[p], sender: self)
+     
+    }
+    
+    
+    
+    @IBAction func presentScene2(_ sender: Any)
+    {
+        performSegue(withIdentifier: names[p], sender: self)
+    }
+    
     
     
     
@@ -31,14 +49,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         
         
-        
     }
     
     
     
    
     
-    var names = ["peisajAfrica", "landscapeEurope","landscapeUsa","landscapeAmazon","landscapeAsia"]
+    var names = [ "landscapeEurope","landscapeAsia","landscapeUsa","landscapeAmazon"]
+    
+    var names2 = ["double1", "double2", "double3", "double4"]
     
     var p: Int!
     
@@ -57,8 +76,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     cell.myImage.image = UIImage(named: names[p] + ".jpg")
         UIView.transition(with: cell.myImage, duration: 0.3, options: [.transitionCurlDown], animations: {
             cell.myImage.image = UIImage(named: self.names[self.p] + ".jpg")
+            
+            
+            
+            
         })
      
+        cell.myImage2.image = UIImage(named: names2[p] + ".jpg")
         
         
         return cell

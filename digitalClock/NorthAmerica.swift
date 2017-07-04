@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import AudioToolbox
 
 
 class NorthAmerica: UIViewController, CLLocationManagerDelegate {
@@ -44,7 +45,7 @@ class NorthAmerica: UIViewController, CLLocationManagerDelegate {
     
     
     var correctAnswer = String()
-    var randomQuestionArray:[Int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+    var randomQuestionArray:[Int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
     
     
     var livesNumber:Int = 3
@@ -70,7 +71,7 @@ class NorthAmerica: UIViewController, CLLocationManagerDelegate {
         
         nextQuestionOutlet.layer.cornerRadius = 15
         
-        countQuestionsLabel.text = "Q: 1/13"
+        countQuestionsLabel.text = "Q: 1/22"
         
         
         randomQuestions()
@@ -179,17 +180,17 @@ class NorthAmerica: UIViewController, CLLocationManagerDelegate {
     func removeTextColor() {
         
         
-        button1.backgroundColor = UIColor(red:106/255, green:207/255, blue:255/255, alpha: 1.0)
-       button2.backgroundColor = UIColor(red:106/255, green:207/255, blue:255/255, alpha: 1.0)
-        button3.backgroundColor = UIColor(red:106/255, green:207/255, blue:255/255, alpha: 1.0)
-        button4.backgroundColor = UIColor(red:106/255, green:207/255, blue:255/255, alpha: 1.0)
+        button1.backgroundColor = UIColor(red:206/255, green:180/255, blue:187/255, alpha: 0.4)
+        button2.backgroundColor = UIColor(red:206/255, green:180/255, blue:187/255, alpha: 0.4)
+        button3.backgroundColor = UIColor(red:206/255, green:180/255, blue:187/255, alpha: 0.4)
+        button4.backgroundColor = UIColor(red:206/255, green:180/255, blue:187/255, alpha: 0.4)
         
         
         
-        button1.setTitleColor(UIColor.blue, for: UIControlState.normal)
-        button2.setTitleColor(UIColor.blue, for: UIControlState.normal)
-        button3.setTitleColor(UIColor.blue, for: UIControlState.normal)
-        button4.setTitleColor(UIColor.blue, for: UIControlState.normal)
+        button1.setTitleColor(UIColor.white, for: UIControlState.normal)
+        button2.setTitleColor(UIColor.white, for: UIControlState.normal)
+        button3.setTitleColor(UIColor.white, for: UIControlState.normal)
+        button4.setTitleColor(UIColor.white, for: UIControlState.normal)
         
         
         
@@ -239,12 +240,12 @@ class NorthAmerica: UIViewController, CLLocationManagerDelegate {
     
     func didUserWin() {
         
-        if countQuestions == 13 && livesNumber > 0 {
+        if countQuestions == 22 && livesNumber > 0 {
             
             
             finishOutlet.isHidden = false
             finishOutlet.setTitle("Congratulations! You completed the quiz", for: UIControlState.normal)
-            finishOutlet.setTitleColor(UIColor.red, for: UIControlState.normal)
+         
             hideButtons()
             nextQuestionOutlet.isHidden = true
         }
@@ -266,11 +267,11 @@ class NorthAmerica: UIViewController, CLLocationManagerDelegate {
         
         countQuestions += 1
         
-        if countQuestions > 13 {
-            countQuestions = 13
+        if countQuestions > 22 {
+            countQuestions = 22
         }
         
-        countQuestionsLabel.text = String("Q: \(countQuestions)/13")
+        countQuestionsLabel.text = String("Q: \(countQuestions)/22")
         
         
         
@@ -1009,6 +1010,7 @@ class NorthAmerica: UIViewController, CLLocationManagerDelegate {
             
         } else {
             button1.backgroundColor = UIColor.red
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             
             if correctAnswer == "2" {
                 button2.backgroundColor = UIColor.green
@@ -1025,7 +1027,7 @@ class NorthAmerica: UIViewController, CLLocationManagerDelegate {
                 button4.backgroundColor = UIColor.green
                
             }
-            if countQuestions == 13 {
+            if countQuestions == 22 {
                 unhideButtons()
             }
             
@@ -1068,6 +1070,7 @@ class NorthAmerica: UIViewController, CLLocationManagerDelegate {
             
         } else {
             button2.backgroundColor = UIColor.red
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             
             
             if correctAnswer == "1" {
@@ -1084,7 +1087,7 @@ class NorthAmerica: UIViewController, CLLocationManagerDelegate {
                 button4.backgroundColor = UIColor.green
                 
             }
-            if countQuestions == 13 {
+            if countQuestions == 22 {
                 unhideButtons()
             }
             
@@ -1129,6 +1132,7 @@ class NorthAmerica: UIViewController, CLLocationManagerDelegate {
           
         }else {
             button3.backgroundColor = UIColor.red
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
 
             
             
@@ -1146,7 +1150,7 @@ class NorthAmerica: UIViewController, CLLocationManagerDelegate {
                 button4.backgroundColor = UIColor.green
                 
             }
-            if countQuestions == 13 {
+            if countQuestions == 22 {
                 unhideButtons()
             }
             
@@ -1190,6 +1194,7 @@ class NorthAmerica: UIViewController, CLLocationManagerDelegate {
            
         }else {
             button4.backgroundColor = UIColor.red
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             
             if correctAnswer == "2" {
                 button2.backgroundColor = UIColor.green
@@ -1205,7 +1210,7 @@ class NorthAmerica: UIViewController, CLLocationManagerDelegate {
                 button1.backgroundColor = UIColor.green
                
             }
-            if countQuestions == 13 {
+            if countQuestions == 22 {
                 unhideButtons()
             }
             
@@ -1243,7 +1248,7 @@ class NorthAmerica: UIViewController, CLLocationManagerDelegate {
         
        
         countQuestions += 1
-        countQuestionsLabel.text = String("Q: \(countQuestions)/13")
+        countQuestionsLabel.text = String("Q: \(countQuestions)/22")
        
         
         
@@ -1256,13 +1261,13 @@ class NorthAmerica: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func finishButton(_ sender: Any) {
         
-       randomQuestionArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+       randomQuestionArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
         
         livesNumber = 3
         countQuestions = 1
         
        livesLabel.text = String("Lives: \(livesNumber)")
-        countQuestionsLabel.text = String("Q: \(countQuestions)/13")
+        countQuestionsLabel.text = String("Q: \(countQuestions)/22")
         
         enable()
         removeTextColor()

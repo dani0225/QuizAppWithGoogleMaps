@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import AudioToolbox
 
 
 class SouthAmerica: UIViewController, CLLocationManagerDelegate {
@@ -179,17 +180,17 @@ class SouthAmerica: UIViewController, CLLocationManagerDelegate {
     func removeTextColor() {
         
         
-        button1.backgroundColor = UIColor(red:106/255, green:207/255, blue:255/255, alpha: 1.0)
-       button2.backgroundColor = UIColor(red:106/255, green:207/255, blue:255/255, alpha: 1.0)
-        button3.backgroundColor = UIColor(red:106/255, green:207/255, blue:255/255, alpha: 1.0)
-        button4.backgroundColor = UIColor(red:106/255, green:207/255, blue:255/255, alpha: 1.0)
+        button1.backgroundColor = UIColor(red:206/255, green:180/255, blue:187/255, alpha: 0.4)
+        button2.backgroundColor = UIColor(red:206/255, green:180/255, blue:187/255, alpha: 0.4)
+        button3.backgroundColor = UIColor(red:206/255, green:180/255, blue:187/255, alpha: 0.4)
+        button4.backgroundColor = UIColor(red:206/255, green:180/255, blue:187/255, alpha: 0.4)
         
         
         
-        button1.setTitleColor(UIColor.blue, for: UIControlState.normal)
-        button2.setTitleColor(UIColor.blue, for: UIControlState.normal)
-        button3.setTitleColor(UIColor.blue, for: UIControlState.normal)
-        button4.setTitleColor(UIColor.blue, for: UIControlState.normal)
+        button1.setTitleColor(UIColor.white, for: UIControlState.normal)
+        button2.setTitleColor(UIColor.white, for: UIControlState.normal)
+        button3.setTitleColor(UIColor.white, for: UIControlState.normal)
+        button4.setTitleColor(UIColor.white, for: UIControlState.normal)
         
         
         
@@ -244,7 +245,7 @@ class SouthAmerica: UIViewController, CLLocationManagerDelegate {
             
             finishOutlet.isHidden = false
             finishOutlet.setTitle("Congratulations! You completed the quiz", for: UIControlState.normal)
-            finishOutlet.setTitleColor(UIColor.red, for: UIControlState.normal)
+            
             hideButtons()
             nextQuestionOutlet.isHidden = true
         }
@@ -701,6 +702,7 @@ class SouthAmerica: UIViewController, CLLocationManagerDelegate {
             
         } else {
             button1.backgroundColor = UIColor.red
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             
             if correctAnswer == "2" {
                 button2.backgroundColor = UIColor.green
@@ -760,6 +762,7 @@ class SouthAmerica: UIViewController, CLLocationManagerDelegate {
             
         } else {
             button2.backgroundColor = UIColor.red
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             
             
             if correctAnswer == "1" {
@@ -821,6 +824,7 @@ class SouthAmerica: UIViewController, CLLocationManagerDelegate {
           
         }else {
             button3.backgroundColor = UIColor.red
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
 
             
             
@@ -882,6 +886,7 @@ class SouthAmerica: UIViewController, CLLocationManagerDelegate {
            
         }else {
             button4.backgroundColor = UIColor.red
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             
             if correctAnswer == "2" {
                 button2.backgroundColor = UIColor.green

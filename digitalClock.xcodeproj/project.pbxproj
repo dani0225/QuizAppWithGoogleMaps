@@ -31,6 +31,11 @@
 		84796A161F063A3C003CF86F /* Molle-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84796A151F063A3C003CF86F /* Molle-Regular.ttf */; };
 		84796A181F063ECB003CF86F /* Akronim-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84796A171F063ECB003CF86F /* Akronim-Regular.ttf */; };
 		84A3AE2F1F04F74300E6D82F /* Pis.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84A3AE2E1F04F74300E6D82F /* Pis.jpg */; };
+		84B521AB1F0C14B4006921C2 /* double1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84B521A61F0C14B4006921C2 /* double1.jpg */; };
+		84B521AC1F0C14B4006921C2 /* double2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84B521A71F0C14B4006921C2 /* double2.jpg */; };
+		84B521AD1F0C14B4006921C2 /* double3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84B521A81F0C14B4006921C2 /* double3.jpg */; };
+		84B521AE1F0C14B4006921C2 /* double4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84B521A91F0C14B4006921C2 /* double4.jpg */; };
+		84B521AF1F0C14B4006921C2 /* double22.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84B521AA1F0C14B4006921C2 /* double22.jpg */; };
 		84B62A6F1E505D3F00C760F2 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B62A6E1E505D3F00C760F2 /* Storyboard.storyboard */; };
 		84B62A741E50848900C760F2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B62A731E50848900C760F2 /* MapKit.framework */; };
 		84B62A761E5087F600C760F2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B62A751E5087F600C760F2 /* CoreLocation.framework */; };
@@ -87,6 +92,11 @@
 		84796A151F063A3C003CF86F /* Molle-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Molle-Regular.ttf"; sourceTree = "<group>"; };
 		84796A171F063ECB003CF86F /* Akronim-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Akronim-Regular.ttf"; sourceTree = "<group>"; };
 		84A3AE2E1F04F74300E6D82F /* Pis.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Pis.jpg; sourceTree = "<group>"; };
+		84B521A61F0C14B4006921C2 /* double1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = double1.jpg; sourceTree = "<group>"; };
+		84B521A71F0C14B4006921C2 /* double2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = double2.jpg; sourceTree = "<group>"; };
+		84B521A81F0C14B4006921C2 /* double3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = double3.jpg; sourceTree = "<group>"; };
+		84B521A91F0C14B4006921C2 /* double4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = double4.jpg; sourceTree = "<group>"; };
+		84B521AA1F0C14B4006921C2 /* double22.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = double22.jpg; sourceTree = "<group>"; };
 		84B62A6E1E505D3F00C760F2 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		84B62A731E50848900C760F2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		84B62A751E5087F600C760F2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -131,6 +141,11 @@
 				8456BC311F0A85DD0061FCBC /* insta.jpg */,
 				84652E101F0676BA00216213 /* landscapeAmazon.jpg */,
 				84652E161F0677BF00216213 /* landscapeAsia.jpg */,
+				84B521A61F0C14B4006921C2 /* double1.jpg */,
+				84B521A71F0C14B4006921C2 /* double2.jpg */,
+				84B521A81F0C14B4006921C2 /* double3.jpg */,
+				84B521A91F0C14B4006921C2 /* double4.jpg */,
+				84B521AA1F0C14B4006921C2 /* double22.jpg */,
 				84652E121F0676BA00216213 /* landscapeUsa.jpg */,
 				84652E0C1F066A4600216213 /* LandscapeAfrica.jpg */,
 				84652E0A1F065CB700216213 /* peisajAfrica.jpg */,
@@ -332,12 +347,17 @@
 			files = (
 				84A3AE2F1F04F74300E6D82F /* Pis.jpg in Resources */,
 				84652E0B1F065CB700216213 /* peisajAfrica.jpg in Resources */,
+				84B521AF1F0C14B4006921C2 /* double22.jpg in Resources */,
 				8467A0251F0258D300FC7331 /* northAmerica.png in Resources */,
 				84652E171F0677BF00216213 /* landscapeAsia.jpg in Resources */,
 				8467A02B1F025BE900FC7331 /* southAme.png in Resources */,
+				84B521AC1F0C14B4006921C2 /* double2.jpg in Resources */,
 				845A9D351E3E240F00EE1167 /* LaunchScreen.storyboard in Resources */,
+				84B521AB1F0C14B4006921C2 /* double1.jpg in Resources */,
 				84652E131F0676BA00216213 /* landscapeAmazon.jpg in Resources */,
 				8407E36F1F02F46D007DBABB /* aaf.jpg in Resources */,
+				84B521AD1F0C14B4006921C2 /* double3.jpg in Resources */,
+				84B521AE1F0C14B4006921C2 /* double4.jpg in Resources */,
 				845A9D321E3E240F00EE1167 /* Assets.xcassets in Resources */,
 				843659451F050C5D00E47725 /* detist.jpg in Resources */,
 				8456BC321F0A85DD0061FCBC /* insta.jpg in Resources */,

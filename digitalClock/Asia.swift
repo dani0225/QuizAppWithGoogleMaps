@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import AudioToolbox
 
 
 class Asia: UIViewController, CLLocationManagerDelegate {
@@ -61,10 +62,10 @@ class Asia: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
 
         
-        button1.layer.cornerRadius = 35
-        button2.layer.cornerRadius = 55
-        button3.layer.cornerRadius = 75
-        button4.layer.cornerRadius = 5
+        button1.layer.cornerRadius = 20
+        button2.layer.cornerRadius = 20
+        button3.layer.cornerRadius = 20
+        button4.layer.cornerRadius = 20
         
         nextQuestionOutlet.isHidden = true
         
@@ -190,6 +191,7 @@ class Asia: UIViewController, CLLocationManagerDelegate {
         button2.setTitleColor(UIColor.white, for: UIControlState.normal)
         button3.setTitleColor(UIColor.white, for: UIControlState.normal)
         button4.setTitleColor(UIColor.white, for: UIControlState.normal)
+
         
         
         
@@ -244,7 +246,7 @@ class Asia: UIViewController, CLLocationManagerDelegate {
             
             finishOutlet.isHidden = false
             finishOutlet.setTitle("Congratulations! You completed the quiz", for: UIControlState.normal)
-            finishOutlet.setTitleColor(UIColor.red, for: UIControlState.normal)
+            
             hideButtons()
             nextQuestionOutlet.isHidden = true
         }
@@ -260,6 +262,8 @@ class Asia: UIViewController, CLLocationManagerDelegate {
         
         randomQuestions()
         enable()
+        removeTextColor()
+        
         
         nextQuestionOutlet.isHidden = true
         
@@ -1647,6 +1651,7 @@ class Asia: UIViewController, CLLocationManagerDelegate {
             
         } else {
             button1.backgroundColor = UIColor.red
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             
             if correctAnswer == "2" {
                 button2.backgroundColor = UIColor.green
@@ -1706,6 +1711,7 @@ class Asia: UIViewController, CLLocationManagerDelegate {
             
         } else {
             button2.backgroundColor = UIColor.red
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             
             
             if correctAnswer == "1" {
@@ -1767,6 +1773,7 @@ class Asia: UIViewController, CLLocationManagerDelegate {
           
         }else {
             button3.backgroundColor = UIColor.red
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
 
             
             
@@ -1828,6 +1835,7 @@ class Asia: UIViewController, CLLocationManagerDelegate {
            
         }else {
             button4.backgroundColor = UIColor.red
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             
             if correctAnswer == "2" {
                 button2.backgroundColor = UIColor.green

@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import AudioToolbox
 
 
 class celCorect: UIViewController, CLLocationManagerDelegate {
@@ -241,7 +242,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             
             finishOutlet.isHidden = false
             finishOutlet.setTitle("Congratulations! You completed the quiz", for: UIControlState.normal)
-            finishOutlet.setTitleColor(UIColor.red, for: UIControlState.normal)
+         
             hideButtons()
             nextQuestionOutlet.isHidden = true
         }
@@ -1732,6 +1733,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             
         } else {
             button1.backgroundColor = UIColor.red
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             
             if correctAnswer == "2" {
                 button2.backgroundColor = UIColor.green
@@ -1791,6 +1793,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
             
         } else {
             button2.backgroundColor = UIColor.red
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             
             
             if correctAnswer == "1" {
@@ -1852,6 +1855,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
           
         }else {
             button3.backgroundColor = UIColor.red
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
 
             
             
@@ -1913,6 +1917,7 @@ class celCorect: UIViewController, CLLocationManagerDelegate {
            
         }else {
             button4.backgroundColor = UIColor.red
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             
             if correctAnswer == "2" {
                 button2.backgroundColor = UIColor.green

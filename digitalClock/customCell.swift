@@ -12,8 +12,10 @@ class customCell: UITableViewCell {
     
     
    
-    
     @IBOutlet var myImage: UIImageView!
+    
+    
+    @IBOutlet var myImage2: UIImageView!
     
 
     func setup(image: UIImage)
